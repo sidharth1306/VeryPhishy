@@ -1,0 +1,18 @@
+rules:
+  - id: urgent_language
+    category: content
+    weight: 20
+    reason: "The message pressures you to act quickly"
+    patterns:
+      - "within 24 hours"
+      - "immediately"
+      - "account will be (blocked|suspended)"
+
+  - id: kyc_update_lure
+    category: content
+    weight: 25
+    reason: "the message asks you to update KYC, a common scam lure"
+    patterns:
+      - "update (your )?KYC"
+      - "KYC is (expired|pending)"
+       
